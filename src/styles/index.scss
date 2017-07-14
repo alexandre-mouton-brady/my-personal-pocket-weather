@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,108 @@
+{
+  "tree": {
+    "fusebox-hot-reload@0.0.0": {
+      "deps": {
+        "fusebox-websocket@0.0.0": {
+          "deps": {
+            "events@0.0.0": {
+              "deps": {},
+              "name": "events",
+              "version": "0.0.0"
+            }
+          },
+          "name": "fusebox-websocket",
+          "version": "0.0.0"
+        }
+      },
+      "name": "fusebox-hot-reload",
+      "version": "0.0.0"
+    },
+    "fuse-box-css@0.0.1": {
+      "deps": {},
+      "name": "fuse-box-css",
+      "version": "0.0.1"
+    },
+    "inferno@3.6.4": {
+      "deps": {
+        "process@0.0.0": {
+          "deps": {
+            "object-assign-polyfill@0.0.0": {
+              "deps": {},
+              "name": "object-assign-polyfill",
+              "version": "0.0.0"
+            }
+          },
+          "name": "process",
+          "version": "0.0.0"
+        }
+      },
+      "name": "inferno",
+      "version": "3.6.4"
+    },
+    "inferno-component@3.6.4": {
+      "deps": {},
+      "name": "inferno-component",
+      "version": "3.6.4"
+    }
+  },
+  "flat": {
+    "fusebox-hot-reload@0.0.0": {
+      "name": "fusebox-hot-reload",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "fusebox-websocket@0.0.0": {
+      "name": "fusebox-websocket",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "events@0.0.0": {
+      "name": "events",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "fuse-box-css@0.0.1": {
+      "name": "fuse-box-css",
+      "version": "0.0.1",
+      "files": [
+        "index.js"
+      ]
+    },
+    "inferno@3.6.4": {
+      "name": "inferno",
+      "version": "3.6.4",
+      "files": [
+        "index.js",
+        "dist/index.js"
+      ]
+    },
+    "process@0.0.0": {
+      "name": "process",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "object-assign-polyfill@0.0.0": {
+      "name": "object-assign-polyfill",
+      "version": "0.0.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "inferno-component@3.6.4": {
+      "name": "inferno-component",
+      "version": "3.6.4",
+      "files": [
+        "index.js",
+        "dist/index.js"
+      ]
+    }
+  }
+}
