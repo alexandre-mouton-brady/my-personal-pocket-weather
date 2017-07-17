@@ -8,9 +8,11 @@
   },
   "devDependencies": {
     "fuse-box": "^2.2.0",
+    "moment-timezone": "^0.5.13",
     "node-sass": "^4.5.3",
     "typescript": "^2.4.1",
-    "uglify-js": "^3.0.24"
+    "uglify-js": "^3.0.24",
+    "unsplash-js": "^4.6.0"
   },
   "dependencies": {
     "babel-core": "^6.25.0",

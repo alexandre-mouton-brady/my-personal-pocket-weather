@@ -35,6 +35,12 @@ Sparky.task('clean', () => {
   return Sparky.src('dist/').clean('dist/');
 });
 
-Sparky.task('default', ['clean'], () => {
+Sparky.task('watch:images', () => {
+  return Sparky.watch('**/*.+(svg|png|jpg|gif)', { base: './src' }).dest(
+    './dist',
+  );
+});
+
+Sparky.task('default', ['clean', 'watch:images'], () => {
   fuse.run();
 });

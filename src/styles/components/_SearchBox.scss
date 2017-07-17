@@ -1,0 +1,33 @@
+.search-box {
+  display: block;
+  flex: 1;
+  position: relative;
+  z-index: 10;
+  margin-bottom: auto;
+  white-space: nowrap;
+  background-color: transparentize($dark-2, 0.1);
+
+  &__input {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: inherit;
+    padding: 5px 20px;
+    font-size: 2rem;
+    border-width: 0;
+    background-color: transparent;
+    z-index: 10;
+    color: #fff;
+  }
+
+  &::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: 20px;
+    font-size: 2rem;
+    top: 5px;
+    color: transparentize(#fff, 0.5);
+    user-select: none;
+    z-index: 5;
+  }
+}

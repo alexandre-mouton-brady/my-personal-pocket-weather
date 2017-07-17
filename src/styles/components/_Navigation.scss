@@ -1,0 +1,36 @@
+.navigation {
+  position: relative;
+  width: 100%;
+  display: flex;
+  background-image: linear-gradient(to top, #333, transparent);
+  z-index: 10;
+
+  &__link {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $gray-1;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      background-color: $green-1;
+    }
+
+    & > img {
+      display: block;
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+    }
+  }
+}

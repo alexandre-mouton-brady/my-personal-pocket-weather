@@ -1,14 +1,67 @@
 @import './variables.scss';
+@import './components/_SearchBox';
+@import './components/_Location';
+@import './components/_WeatherItem';
+@import './components/_CurrentWeather';
+@import './components/_Navigation';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
 
 body {
   margin: 0;
+  color: #333;
+  font-size: 21px;
+  font-family: $sans-serif;
 }
 
-img {
-  display: block;
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hero {
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  &__cover {
+    height: auto;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.weather {
+  display: flex;
+  flex: 1;
+
+  &__right {
+    display: flex;
+    flex: 1;
+  }
 }

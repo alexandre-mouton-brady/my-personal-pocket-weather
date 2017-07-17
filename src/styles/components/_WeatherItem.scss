@@ -1,0 +1,38 @@
+.weekday {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border-left: solid 2px transparentize(#333, 0.8);
+
+  &__name {
+    padding: 3px 10px;
+    text-transform: uppercase;
+    background-color: #555;
+    color: $gray-1;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    position: relative;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

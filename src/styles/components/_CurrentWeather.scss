@@ -1,0 +1,51 @@
+.today {
+  position: relative;
+  min-width: 25%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__left {
+    margin-right: 15px;
+  }
+
+  &__right {
+    margin-left: 15px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__temp {
+    font-size: 5rem;
+  }
+
+  &__icon {
+    width: 100px;
+    height: auto;
+  }
+
+  &__condition {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__date {
+    font-size: 1rem;
+    display: block;
+    background-color: #333;
+    color: $gray-1;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 3px 15px;
+    text-align: center;
+
+    & > sup {
+      text-transform: initial;
+    }
+  }
+}
