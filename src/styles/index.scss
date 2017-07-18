@@ -49,10 +49,19 @@ body {
 
   &__cover {
     height: auto;
+    left: 0;
+    top: -25%;
     width: 100%;
     display: block;
     position: absolute;
     z-index: 5;
+
+    &--anim-in {
+      animation: anim-in 300ms ease-in-out both;
+    }
+    &--anim-out {
+      animation: anim-out 300ms ease-in-out both;
+    }
   }
 }
 
@@ -63,5 +72,27 @@ body {
   &__right {
     display: flex;
     flex: 1;
+  }
+}
+
+@keyframes anim-in {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim-out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
   }
 }
