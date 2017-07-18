@@ -1,11 +1,18 @@
 .search-box {
   display: block;
-  flex: 1;
   position: relative;
   z-index: 10;
   margin-bottom: auto;
+  width: 70%;
   white-space: nowrap;
-  background-color: transparentize($dark-2, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+
+  &__icon {
+    position: absolute;
+    top: calc(50% - 13px);
+    right: 20px;
+  }
 
   &__input {
     display: block;
@@ -17,7 +24,11 @@
     border-width: 0;
     background-color: transparent;
     z-index: 10;
-    color: #fff;
+    color: #333;
+
+    &:focus {
+      outline-width: 0;
+    }
   }
 
   &::after {
@@ -26,7 +37,7 @@
     left: 20px;
     font-size: 2rem;
     top: 5px;
-    color: transparentize(#fff, 0.5);
+    color: transparentize(#333, 0.8);
     user-select: none;
     z-index: 5;
   }

@@ -93,3 +93,6 @@ $RECYCLE.BIN/
 
 # Fusebox cache
 .fusebox
+
+#dist fodler
+dist/

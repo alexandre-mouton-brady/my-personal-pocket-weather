@@ -17,6 +17,7 @@ import Location from './components/Location.jsx';
 import Navigation from './components/Navigation.jsx';
 import CurrentWeather from './components/CurrentWeather.jsx';
 import WeatherItem from './components/WeatherItem.jsx';
+import Background from './components/Background.jsx';
 
 /**
  * @description 
@@ -119,8 +120,6 @@ class App extends Component {
 
         currentLocation = `${currentLocation.split(',')[0]}, ${country}`;
 
-        console.log(weather);
-
         const currentWeather = weather.item.condition;
 
         this.setState({ forecast, currentWeather, currentLocation, country });
@@ -140,15 +139,12 @@ class App extends Component {
   }
 
   getImage(country) {
-    console.log(country);
-    // this.state.unsplash.photos
-    //   .searchPhotos(country, undefined, 1, 5)
-    //   .then(res => res.json())
-    //   .then(json => {
-    //     const random = Math.round(1 + Math.random() * 4);
-
-    //     this.setState({ photo: json[random].links.download });
-    //   });
+    this.state.unsplash.photos
+      .searchPhotos(country, undefined, 1, 1)
+      .then(res => res.json())
+      .then(json => {
+        this.setState({ photo: json[0].links.download });
+      });
   }
 
   render() {
@@ -161,13 +157,14 @@ class App extends Component {
     return (
       <div className="container">
         <div className="hero">
-          <img className="hero__cover" src={this.state.photo} />
+          <Background isShowing={true} src={this.state.photo} />
+
           <header className="header">
             <SearchBox
-              handleInput={debounce(this.handleInput.bind(this), 200)}
+              handleInput={debounce(this.handleInput.bind(this), 100)}
               handleEnter={this.setWeather.bind(this)}
               setImage={this.getImage.bind(this)}
-              country={this.state.country}
+              country={getCountryByFullname}
               suggest={this.state.suggest}
             />
             <Location location={this.state.currentLocation} />

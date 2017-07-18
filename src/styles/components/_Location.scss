@@ -5,6 +5,7 @@
   margin-bottom: auto;
   flex-flow: column nowrap;
   align-items: flex-end;
+  color: #fff;
 
   &__icon {
     height: 50px;
@@ -24,6 +25,7 @@
     text-align: right;
     font-weight: bold;
     font-size: 0.9rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   }
 
   &__container {
@@ -32,5 +34,6 @@
 
   &__time {
     font-size: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   }
 }
