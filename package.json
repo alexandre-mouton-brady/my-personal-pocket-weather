@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "node fuse",
-    "build": "node fuse.prod"
+    "build": "node fuse.prod",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "fuse-box": "^2.2.0",
@@ -20,6 +21,7 @@
     "babel-plugin-inferno": "^3.2.0",
     "babel-preset-env": "^1.6.0",
     "inferno": "^3.6.4",
-    "inferno-component": "^3.6.4"
+    "inferno-component": "^3.6.4",
+    "push-dir": "^0.4.1"
   }
 }
