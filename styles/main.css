@@ -1,0 +1,232 @@
+.search-box {
+  display: block;
+  position: relative;
+  z-index: 10;
+  margin-bottom: auto;
+  width: 70%;
+  white-space: nowrap;
+  background-color: #fff;
+  overflow: hidden; }
+  .search-box__icon {
+    position: absolute;
+    top: calc(50% - 13px);
+    right: 20px; }
+  .search-box__input {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-family: inherit;
+    padding: 5px 20px;
+    font-size: 2rem;
+    border-width: 0;
+    background-color: transparent;
+    z-index: 10;
+    color: #333; }
+    .search-box__input:focus {
+      outline-width: 0; }
+  .search-box::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: 20px;
+    font-size: 2rem;
+    top: 5px;
+    color: rgba(51, 51, 51, 0.2);
+    user-select: none;
+    z-index: 5; }
+
+.location {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  margin-bottom: auto;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  color: #fff; }
+  .location__icon {
+    height: 50px;
+    width: 50px; }
+    .location__icon > img {
+      display: block;
+      width: 100%;
+      width: 100%; }
+  .location__city {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }
+  .location__container {
+    margin: 20px 0 10px; }
+  .location__time {
+    font-size: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }
+
+.weekday {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border-left: solid 2px rgba(51, 51, 51, 0.2); }
+  .weekday__name {
+    padding: 3px 10px;
+    text-transform: uppercase;
+    background-color: #555;
+    color: #ecf0f1;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 10px; }
+  .weekday__icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+    position: relative; }
+    .weekday__icon > img {
+      height: 100%;
+      width: 100%;
+      display: block; }
+  .weekday__temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center; }
+
+.today {
+  position: relative;
+  min-width: 25%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .today__left {
+    margin-right: 15px; }
+  .today__right {
+    margin-left: 15px; }
+  .today__left, .today__right {
+    display: flex;
+    flex-flow: column nowrap; }
+  .today__temp {
+    font-size: 5rem; }
+  .today__icon {
+    width: 100px;
+    height: auto; }
+  .today__condition {
+    font-size: 1rem;
+    text-align: center; }
+  .today__date {
+    font-size: 1rem;
+    display: block;
+    background-color: #333;
+    color: #ecf0f1;
+    text-transform: uppercase;
+    border-radius: 50px;
+    padding: 3px 15px;
+    text-align: center; }
+    .today__date > sup {
+      text-transform: initial; }
+
+.navigation {
+  position: relative;
+  width: 100%;
+  display: flex;
+  background-image: linear-gradient(to top, #333, transparent);
+  z-index: 10; }
+  .navigation__link {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #ecf0f1;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 20px; }
+    .navigation__link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      background-color: #2ecc71; }
+    .navigation__link > img {
+      display: block;
+      height: 24px;
+      width: 24px;
+      margin-right: 10px; }
+
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  color: #333;
+  font-size: 21px;
+  font-family: Lato, "Segoe UI", Arial, Helvetica, sans-serif; }
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px; }
+
+.hero {
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; }
+  .hero__cover {
+    height: auto;
+    left: 0;
+    top: -25%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 5; }
+    .hero__cover--anim-in {
+      animation: anim-in 300ms ease-in-out both; }
+    .hero__cover--anim-out {
+      animation: anim-out 300ms ease-in-out both; }
+
+.weather {
+  display: flex;
+  flex: 1; }
+  .weather__right {
+    display: flex;
+    flex: 1; }
+
+@keyframes anim-in {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0; }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+@keyframes anim-out {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  to {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0; } }
+
+/*# sourceMappingURL=index.scss.map */
